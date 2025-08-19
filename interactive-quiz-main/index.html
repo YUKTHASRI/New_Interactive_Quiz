@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Employee Training Quiz</h1>
+    <p class="instructions">Please answer all questions carefully. The quiz is timed.</p>
+
+    <!-- Progress bar -->
+    <div class="progress-wrapper">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="progress-text">Question 1 of 5</div>
+
+    <form id="quiz-form">
+      <div class="question-container" id="question-container">
+        <p id="question-text">Question will appear here</p>
+        <div class="answer-options"></div>
+      </div>
+
+      <div id="timer">Time left: 30 seconds</div>
+
+      <div class="controls">
+        <button type="button" onclick="nextQuestion()" class="next-btn" id="next-btn" disabled>Next</button>
+        <button type="button" onclick="submitQuiz()" class="submit-btn hidden">Submit Quiz</button>
+      </div>
+    </form>
+
+    <div id="score-container" class="hidden">
+      <p id="score"></p>
+      <button onclick="restartQuiz()" class="restart-btn">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
